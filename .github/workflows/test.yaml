@@ -15,7 +15,7 @@ jobs:
       - name: Get result
         id: compareresult
         run: |
-          echo "::set-output result=true"
+          echo "::set-output name=result::'true'"
           echo "${{ steps.compareresult.outputs.result }}"
       - uses: ./
         with:
