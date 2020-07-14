@@ -16,6 +16,6 @@ jobs:
         id: compareresult
         run: echo "::set-output result='true'"
       - uses: ./
-        env:
+        with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           compare-result: ${{ steps.compareresult.outputs.result }}
