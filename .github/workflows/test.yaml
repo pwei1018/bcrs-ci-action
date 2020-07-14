@@ -15,4 +15,4 @@ jobs:
       - uses: pwei1018/bcrs-ci-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMPARE-RESULT: "${{ steps.compareresult.outputs.result }}"
+          COMPARE-RESULT: ${{ steps.compareresult.outputs.result }}
