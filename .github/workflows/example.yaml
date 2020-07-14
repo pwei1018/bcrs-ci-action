@@ -1,13 +1,12 @@
-name: test
+name: example action
 
 on:
   pull_request:
-    types: [opened, labeled, unlabeled, synchronize]
     branches:
       - master
 
 jobs:
-  test-action:
+  example-action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
