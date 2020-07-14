@@ -1,0 +1,19 @@
+name: "Compare 1password valuts"
+author: "Patrick Wei"
+description: "Compare 1password valuts"
+branding:
+  icon: "check"
+  color: "gray-dark"
+inputs:
+  github-token:
+    description: "The GitHub token"
+    required: true
+  compare-result:
+    description: "The compare result"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.github-token }}
+    - ${{ inputs.compare-result }}
