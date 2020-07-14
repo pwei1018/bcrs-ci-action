@@ -17,5 +17,5 @@ jobs:
         run: echo "::set-output result=true"
       - uses: ./
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMPARE-RESULT: ${{ steps.compareresult.outputs.result }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          compare-result: ${{ steps.compareresult.outputs.result }}
