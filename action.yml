@@ -1,19 +1,23 @@
-name: "Compare 1password valuts"
+name: "PR review approval action"
 author: "Patrick Wei"
-description: "Compare 1password valuts"
+description: "PR review approval action"
 branding:
   icon: "check"
-  color: "gray-dark"
+  color: "blue"
 inputs:
   github-token:
     description: "The GitHub token"
     required: true
-  compare-result:
-    description: "The compare result"
+  pr-approval:
+    description: "PR check approve this PR or not"
+    required: true
+  pr-message:
+    description: "The PR comments"
     required: true
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.github-token }}
-    - ${{ inputs.compare-result }}
+    - ${{ inputs.pr-approval }}
+    - ${{ inputs.pr-message }}

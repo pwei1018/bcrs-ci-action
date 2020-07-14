@@ -1,7 +1,7 @@
 FROM python:3.8.4-slim
 
-RUN pip3 install pygithub==1.47
+RUN pip3 install pygithub
 
-COPY compare_vaults.py /compare_vaults.py
+COPY pr_approval.py /pr_approval.py
 
-ENTRYPOINT ["/compare_vaults.py"]
+ENTRYPOINT ["/pr_approval.py"]
