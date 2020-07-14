@@ -37,6 +37,7 @@ if len(sys.argv) != 3:
 
 # Get the GitHub token
 token = sys.argv[1]
+print(f'token: {token}')
 
 # Get the list of valid labels
 compare_result = sys.argv[2]
