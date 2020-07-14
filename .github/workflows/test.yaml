@@ -1,0 +1,18 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  draft-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get result
+        id: compareresult
+        run: echo "::set-output result=true"
+      - uses: pwei1018/bcrs-ci-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPARE-RESULT: "${{ steps.compareresult.outputs.result }}"
