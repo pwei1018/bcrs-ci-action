@@ -9,6 +9,8 @@ jobs:
   draft-release:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Get result
         id: compareresult
         run: echo "::set-output result=true"
