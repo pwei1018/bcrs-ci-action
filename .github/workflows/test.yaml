@@ -12,7 +12,7 @@ jobs:
       - name: Get result
         id: compareresult
         run: echo "::set-output result=true"
-      - uses: pwei1018/bcrs-ci-action
+      - uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMPARE-RESULT: ${{ steps.compareresult.outputs.result }}
