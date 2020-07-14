@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Get result
         id: compareresult
-        run: echo "::set-output result=true"
+        run: |
+          echo "::set-output result=true"
+          echo "${{ steps.compareresult.outputs.result }}"
       - uses: ./
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
