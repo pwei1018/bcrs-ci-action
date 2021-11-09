@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "::set-output name=approval::true"
           echo "::set-output name=message::This pull request looks good."
-      - uses: ./
+      - uses: pwei1018/bcrs-ci-action@v1.0.1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           pr-approval: "${{ steps.pr.outputs.approval }}"
